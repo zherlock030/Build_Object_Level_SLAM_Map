@@ -21,11 +21,11 @@ if __name__ == '__main__':
         lms = label_pkg.LabelMps(mp_path, mat_path, label_path)
         sys.exit(lms.labeling())
     elif opt.func == 1:
-        pass
-        #sys.exit(show(opt))
+        sho = label_pkg.ShowInstanceMps(mp_path, mat_path, label_path)
+        sys.exit(sho.showing(k = 3))
     else:
-        pass
-        #sys.exit(merge_label(opt))
+        rem = label_pkg.ReMerge(mp_path, label_path)
+        sys.exit(rem.remerge())
     
     try:
         pass
